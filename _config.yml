@@ -1,26 +1,84 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Site settings
+title: Tonny's Blog
+SEOTitle: 夏虫语冰 | Tonny's Blog
+header-img: img/home-bg.jpg
+email: 1343677815@qq.com
+description: "This is my blog."
+keyword: "unity3d,gamedev"
+url: "http://tonnyq.github.io"              # your host, for absolute URL
+baseurl: "/tonnyq.github.io"         # for example, '/blog' if your blog hosted on 'host/blog'
 
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
 
-# Setup
-title:            tonnyq
-tagline:          'unity3d,gamedev'
-description:      '路漫漫其修远兮，吾将上下而求索-屈原'
-url:              http://tonnyq.github.com
-baseurl:          /tonnyq.github.com
 
-author:
-  name:           '夏虫语冰'
-  url:            1343677815@qq.com
+# SNS settings
+RSS: false
+zhihu_username:     tonnyq
+github_username:    tonnyq
 
-paginate:         5
 
-# Custom vars
-version:          2.1.0
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-github:
-  repo:           https://github.com/poole/hyde
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
+
+# Duoshuo settings
+#duoshuo_username: huxblog
+# Share component is depend on Comment so we can NOT use share only.
+#duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+#ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# Google Analytics
+#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+#ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "路漫漫其修远兮，吾将上下而求索！"
+sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+#friends: [
+#    {
+#        title: "Tonny's Blog",
+#        href: "http://tonnyq.github.io"
+#    },
+#]
